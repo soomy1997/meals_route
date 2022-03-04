@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_route/screens/login.dart';
 
 import 'constants.dart';
 
@@ -110,12 +111,12 @@ class _MainDrawerState extends State<MainDrawer> {
               ),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const SignInPage(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                ),
+              );
             },
           ),
         ],
