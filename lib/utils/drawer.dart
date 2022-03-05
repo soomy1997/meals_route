@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_route/screens/login.dart';
+import 'package:meals_route/screens/settings.dart';
 
 import 'constants.dart';
 
@@ -25,10 +26,10 @@ class _MainDrawerState extends State<MainDrawer> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.restaurant_outlined,
+              Icons.add_circle_outline_sharp,
             ),
             title: const Text(
-              'About Us',
+              'Add Campaigns',
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -44,64 +45,30 @@ class _MainDrawerState extends State<MainDrawer> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.language,
+              Icons.settings,
             ),
             title: const Text(
-              'Language Settings',
+              'Settings',
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => Page Name(),
-              //   ),
-              // );
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingScreen(),
+                ),
+              );
             },
+          ),
+          const Divider(
+            thickness: 1,
           ),
           ListTile(
             leading: const Icon(
-              Icons.add_circle_outline_rounded,
-            ),
-            title: const Text(
-              'Add Campaign',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => page name(),
-              //   ),
-              // );
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.contact_support,
-            ),
-            title: const Text(
-              'Contact Adminstration',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => page name(),
-              //   ),
-              // );
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.door_front_door_outlined,
+              Icons.logout,
               color: red,
             ),
             title: const Text(
@@ -111,6 +78,7 @@ class _MainDrawerState extends State<MainDrawer> {
               ),
             ),
             onTap: () {
+              Navigator.pop(context);
               Navigator.push(
                 context,
                 MaterialPageRoute(

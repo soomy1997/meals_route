@@ -15,11 +15,16 @@ class _Tab2State extends State<Tab2> {
   @override
   Widget build(BuildContext context) {
     List<Campaign> campaign = [
-      Campaign('Saleh Campaign', 'Normal Meals', '38'),
-      Campaign('Khaled Campaign', 'Renal Meals', '3'),
-      Campaign('Fhahad Campaign', 'Gluten Free Meals', '7'),
-      Campaign('SA’AD Campaign', 'Low Sodium Meals', '19'),
-      Campaign('Sami Campaign', 'Lactose Free Meals', '28'),
+      Campaign('Saleh Campaign', 'Normal Meals', '38', '05xxxxxxx',
+          'Mecca, 236 \nstreet xxx'),
+      Campaign('Khaled Campaign', 'Renal Meals', '3', '05xxxxxxx',
+          'Mecca, 236 \nstreet xxx'),
+      Campaign('Fhahad Campaign', 'Gluten Free Meals', '7', '05xxxxxxx',
+          'Mecca, 236 \nstreet xxx'),
+      Campaign('SA’AD Campaign', 'Low Sodium Meals', '19', '05xxxxxxx',
+          'Mecca, 236 \nstreet xxx'),
+      Campaign('Sami Campaign', 'Lactose Free Meals', '28', '05xxxxxxx',
+          'Mecca, 236 \nstreet xxx'),
     ];
 
     TextTheme textheme = Theme.of(context).textTheme;
@@ -102,19 +107,40 @@ class _Tab2State extends State<Tab2> {
                   ),
                 ),
                 back: Card(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        Text('Back'),
-                        Text(
-                          'Click here to flip back',
-                        ),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Icon(
+                            Icons.phone,
+                            color: Colors.blue,
+                          ),
+                          Text(
+                            campaign[index].campaignPhoneNumber,
+                            style: textheme.bodyLarge,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          const Icon(
+                            Icons.location_pin,
+                            color: red,
+                          ),
+                          Text(
+                            campaign[index].campaignLocation,
+                            style: textheme.bodyLarge,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
