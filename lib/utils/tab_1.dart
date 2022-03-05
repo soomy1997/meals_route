@@ -10,10 +10,10 @@ class Tab1 extends StatelessWidget {
   Widget build(BuildContext context) {
     List<AllMeals> allMeals = [
       AllMeals("lib/img/diabetic.png", 'Total Normal Meals', '210'),
-      AllMeals("lib/img/diabetic.png", 'Total Renal Meals', '90'),
-      AllMeals("lib/img/diabetic.png", 'Total Gluten Free Meals', '100'),
-      AllMeals("lib/img/diabetic.png", 'Total Low Sodium Meals', '70'),
-      AllMeals("lib/img/diabetic.png", 'Total Lactose Free Meals', '120'),
+      AllMeals("lib/img/renal.png", 'Total Renal Meals', '90'),
+      AllMeals("lib/img/gluten-free.png", 'Total Gluten Free Meals', '100'),
+      AllMeals("lib/img/low-sodium.png", 'Total Low Sodium Meals', '70'),
+      AllMeals("lib/img/lactose-free.png", 'Total Lactose Free Meals', '120'),
     ];
     TextTheme textheme = Theme.of(context).textTheme;
 
@@ -56,14 +56,19 @@ class Tab1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Container(
+                              SizedBox(
                                 height: 100,
                                 width: 90,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    fit: BoxFit.contain,
-                                    image: AssetImage(allMeals[index].imgUrl),
-                                  ),
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.transparent,
+                                  child: SizedBox(
+                                      width: 70,
+                                      height: 70,
+                                      child: ClipOval(
+                                        child: Image.asset(
+                                          allMeals[index].imgUrl,
+                                        ),
+                                      )),
                                 ),
                               )
                             ],

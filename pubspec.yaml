@@ -56,6 +56,10 @@ flutter:
   assets:
     - lib/img/Pic1.png
     - lib/img/diabetic.png
+    - lib/img/renal.png
+    - lib/img/gluten-free.png
+    - lib/img/lactose-free.png
+    - lib/img/low-sodium.png
     - lib/img/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
