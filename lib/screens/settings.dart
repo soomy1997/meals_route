@@ -18,7 +18,7 @@ class _SettingScreenState extends State<SettingScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Settings',
+          'الإعدادات',
           style: textheme.headline2,
         ),
         elevation: 0,
@@ -35,12 +35,12 @@ class _SettingScreenState extends State<SettingScreen> {
         sections: [
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('Common'),
+            title: const Text('عام'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.language),
-                title: const Text('Language'),
-                value: const Text('English'),
+                title: const Text('اللغة'),
+                value: const Text('العربية'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -52,7 +52,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.question_mark_rounded),
-                title: const Text('About Us'),
+                title: const Text('معلومات عنا'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -66,11 +66,11 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('Account'),
+            title: const Text('الحساب'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.account_box),
-                title: const Text('Edit Profile'),
+                title: const Text('تعديل الملف الشخصي'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -82,7 +82,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.lock),
-                title: const Text('Change Password'),
+                title: const Text('تغيير كلمة السر'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -96,11 +96,11 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('Terms and Support'),
+            title: const Text('الشروط والدعم'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.assignment_sharp),
-                title: const Text('Terms & Conditions'),
+                title: const Text('الأحكام والشروط'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -112,7 +112,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.security),
-                title: const Text('Privacy and Security'),
+                title: const Text('الحماية و الخصوصية'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -124,7 +124,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.support_agent_outlined),
-                title: const Text('Support'),
+                title: const Text('الدعم'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -143,7 +143,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   Icons.logout,
                   color: red,
                 ),
-                title: const Text('Logout'),
+                title: const Text('تسجيل الخروج'),
                 onPressed: (BuildContext context) {
                   Navigator.push(
                     context,
