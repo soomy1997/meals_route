@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067163650051",
+    "project_id": "meals-route",
+    "storage_bucket": "meals-route.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067163650051:android:54b28d88e75814b9052636",
+        "android_client_info": {
+          "package_name": "com.example.meals_route"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067163650051-kf28u1qd1vlkk7413r05uk9a3522aeql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqGZlLBk054_iENrl8tnnB5WHutQ0kmcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067163650051-kf28u1qd1vlkk7413r05uk9a3522aeql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
