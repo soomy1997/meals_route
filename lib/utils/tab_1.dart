@@ -9,7 +9,7 @@ class Tab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<AllMeals> allMeals = [
-      AllMeals("lib/img/diabetic.png", 'Total Normal Meals', '210'),
+      AllMeals("lib/img/diabetes.jpg", 'Total Normal Meals', '210'),
       AllMeals("lib/img/renal.png", 'Total Renal Meals', '90'),
       AllMeals("lib/img/gluten-free.png", 'Total Gluten Free Meals', '100'),
       AllMeals("lib/img/low-sodium.png", 'Total Low Sodium Meals', '70'),

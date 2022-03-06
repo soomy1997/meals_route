@@ -55,7 +55,7 @@ flutter:
   uses-material-design: true
   assets:
     - lib/img/Pic1.png
-    - lib/img/diabetic.png
+    - lib/img/diabetes.jpg
     - lib/img/renal.png
     - lib/img/gluten-free.png
     - lib/img/lactose-free.png

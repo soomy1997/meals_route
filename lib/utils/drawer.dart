@@ -26,25 +26,6 @@ class _MainDrawerState extends State<MainDrawer> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.add_circle_outline_sharp,
-            ),
-            title: const Text(
-              'Add Campaigns',
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const MealScreen(),
-              //   ),
-              // );
-            },
-          ),
-          ListTile(
-            leading: const Icon(
               Icons.settings,
             ),
             title: const Text(
@@ -63,6 +44,26 @@ class _MainDrawerState extends State<MainDrawer> {
               );
             },
           ),
+          // ListTile(
+          //   leading: const Icon(
+          //     Icons.settings,
+          //   ),
+          //   title: const Text(
+          //     'expand demo',
+          //     style: TextStyle(
+          //       fontSize: 18,
+          //     ),
+          //   ),
+          //   onTap: () {
+          //     Navigator.pop(context);
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => const ExpansionPanelDemo(),
+          //       ),
+          //     );
+          //   },
+          // ),
           const Divider(
             thickness: 1,
           ),

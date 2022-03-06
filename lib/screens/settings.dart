@@ -34,7 +34,7 @@ class _SettingScreenState extends State<SettingScreen> {
       body: SettingsList(
         sections: [
           SettingsSection(
-            margin: const EdgeInsetsDirectional.all(8),
+            margin: const EdgeInsetsDirectional.all(10),
             title: const Text('Common'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
@@ -65,6 +65,7 @@ class _SettingScreenState extends State<SettingScreen> {
             ],
           ),
           SettingsSection(
+            margin: const EdgeInsetsDirectional.all(10),
             title: const Text('Account'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
@@ -94,7 +95,7 @@ class _SettingScreenState extends State<SettingScreen> {
             ],
           ),
           SettingsSection(
-            margin: const EdgeInsetsDirectional.all(8),
+            margin: const EdgeInsetsDirectional.all(10),
             title: const Text('Terms and Support'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
