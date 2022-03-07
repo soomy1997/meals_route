@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_route/screens/delivery_person_screen.dart';
+import 'package:meals_route/delivery_screens/delivery_person_screen.dart';
 import 'package:meals_route/screens/home_page.dart';
 import 'package:meals_route/screens/sign_up.dart';
 import 'package:meals_route/utils/constants.dart';

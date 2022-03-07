@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_route/delivery_screens/qr_code.dart';
 
 import '../models/campaign.dart';
 import '../utils/constants.dart';
@@ -120,6 +121,7 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
                         Padding(
                           padding: const EdgeInsets.only(top: 20.0),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               SizedBox(
                                 height: 30,
@@ -127,7 +129,13 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
                                 child: MaterialButton(
                                   color: red,
                                   textColor: white,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const QrScan()),
+                                    );
+                                  },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: const [
@@ -152,7 +160,14 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
                                   child: MaterialButton(
                                     color: Colors.green,
                                     textColor: white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const QrScan()),
+                                      );
+                                    },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: const [

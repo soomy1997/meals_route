@@ -124,7 +124,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.support_agent_outlined),
-                title: const Text('الدعم'),
+                title: const Text('Support'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -143,7 +143,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   Icons.logout,
                   color: red,
                 ),
-                title: const Text('تسجيل الخروج'),
+                title: const Text('Logout'),
                 onPressed: (BuildContext context) {
                   Navigator.push(
                     context,
