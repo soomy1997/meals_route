@@ -63,6 +63,8 @@ flutter:
     - lib/img/lactose-free.png
     - lib/img/low-sodium.png
     - lib/img/normal-meal.png
+    - lib/img/moon.png
+    - lib/img/day.png
     - lib/img/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

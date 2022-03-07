@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_route/models/campaign.dart';
-import 'package:meals_route/utils/provider.dart';
+import 'package:meals_route/models/provider.dart';
 import 'package:provider/provider.dart';
 import '../models/campaign.dart';
 import '../utils/constants.dart';
@@ -16,8 +16,6 @@ class Tab2 extends StatefulWidget {
 class _Tab2State extends State<Tab2> {
   @override
   Widget build(BuildContext context) {
-    var d = Provider.of<Demo>(context, listen: false);
-
     TextTheme textheme = Theme.of(context).textTheme;
     return Consumer<Demo>(
       builder: (context, value, child) {
@@ -87,7 +85,7 @@ class _Tab2State extends State<Tab2> {
                                   children: [
                                     const WidgetSpan(
                                         child: Icon(
-                                      Icons.phone,
+                                      Icons.location_pin,
                                       color: red,
                                       size: 15,
                                     )),
@@ -185,45 +183,4 @@ class _Tab2State extends State<Tab2> {
   }
 }
 
-List<Campaign> campaign = <Campaign>[
-  Campaign(
-    campaignName: 'Campaign A',
-    mealType: 'الوجبات العادية',
-    mealNumber: '٣٨',
-    campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
-    deliveryTime: '١٢ مايو ٢٠٢٢',
-  ),
-  Campaign(
-    campaignName: 'Campaign B',
-    mealType: 'وجبات مرضى الكلى',
-    mealNumber: '٣',
-    campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
-    deliveryTime: '١٢ مايو ٢٠٢٢',
-  ),
-  Campaign(
-    campaignName: 'Campaign C',
-    mealType: 'وجبات خالية من الغلوتين',
-    mealNumber: '٧',
-    campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
-    deliveryTime: '١٢ مايو ٢٠٢٢',
-  ),
-  Campaign(
-    campaignName: 'Campaign D',
-    mealType: 'وجبات قليلة الصوديوم',
-    mealNumber: '١٩',
-    campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
-    deliveryTime: '١٢ مايو ٢٠٢٢',
-  ),
-  Campaign(
-    campaignName: 'Campaign G',
-    mealType: 'وجبات خالية من اللاكتوز',
-    mealNumber: '٢٨',
-    campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
-    deliveryTime: '١٢ مايو ٢٠٢٢',
-  ),
-];
+

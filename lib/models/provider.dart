@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_route/utils/tab_2.dart';
+import 'package:meals_route/models/campaign.dart';
 
 class Demo with ChangeNotifier {
   bool expanded = false;
