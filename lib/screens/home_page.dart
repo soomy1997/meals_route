@@ -2,9 +2,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:meals_route/models/campaign.dart';
 import 'package:meals_route/utils/drawer.dart';
+import 'package:meals_route/utils/provider.dart';
 import 'package:meals_route/utils/tab_1.dart';
 import 'package:meals_route/utils/tab_2.dart';
+import 'package:meals_route/utils/tab_3.dart';
+import 'package:provider/provider.dart';
 
 import '../services/user_model.dart';
 import '../utils/constants.dart';
@@ -34,7 +38,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    TabController? _tabController = TabController(length: 2, vsync: this);
+    TabController? _tabController = TabController(length: 3, vsync: this);
     TextTheme textheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
@@ -63,7 +67,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   height: 100,
                 ),
                 Text(
-                  'Central\nRestauarnt',
+                  ' المطعم المركزي ',
                   textAlign: TextAlign.center,
                   style: textheme.headline1,
                 ),
@@ -74,13 +78,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 unselectedLabelColor: Colors.grey[500],
                 controller: _tabController,
                 tabs: const [
-                  Tab(text: 'All Meals'),
-                  Tab(text: 'Campaigns'),
+                  Tab(text: 'إحصائيات الوجبات'),
+                  Tab(text: 'الحملات'),
+                  Tab(text: 'التوصيل'),
                 ]),
             Expanded(
               child: TabBarView(controller: _tabController, children: const [
                 Tab1(),
                 Tab2(),
+                Tab3(),
               ]),
             )
           ],
