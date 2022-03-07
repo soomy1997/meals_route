@@ -9,14 +9,14 @@ class Tab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<AllMeals> allMeals = [
-      AllMeals("lib/img/normal-meal.png", 'مجموع الوجبات العادية', '٢١٠'),
-      AllMeals("lib/img/diabetes.jpg", 'مجموع وجبات مرضى السكر', '١٠٠'),
-      AllMeals("lib/img/renal.png", 'مجموع وجبات مرضى الكلى', '٩٠'),
+      AllMeals("lib/img/normal-meal.png", 'مجموع الوجبات العادية', '210'),
+      AllMeals("lib/img/diabetes.jpg", 'مجموع وجبات مرضى السكر', '100'),
+      AllMeals("lib/img/renal.png", 'مجموع وجبات مرضى الكلى', '90'),
       AllMeals(
-          "lib/img/gluten-free.png", 'مجموع وجبات الخالية من الغلوتين', '١٠٠'),
-      AllMeals("lib/img/low-sodium.png", 'مجموع وجبات قليلة الصوديوم', '٧٠'),
+          "lib/img/gluten-free.png", 'مجموع وجبات الخالية من الغلوتين', '100'),
+      AllMeals("lib/img/low-sodium.png", 'مجموع وجبات قليلة الصوديوم', '70'),
       AllMeals(
-          "lib/img/lactose-free.png", 'مجموع وجبات خالية من اللاكتوز', '١٢٠'),
+          "lib/img/lactose-free.png", 'مجموع وجبات خالية من اللاكتوز', '120'),
     ];
     TextTheme textheme = Theme.of(context).textTheme;
 
@@ -31,7 +31,7 @@ class Tab1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '٤٣٥',
+                    '435',
                     textAlign: TextAlign.center,
                     style: textheme.headline2?.copyWith(color: red),
                   ),
@@ -39,7 +39,7 @@ class Tab1 extends StatelessWidget {
                     width: 20,
                   ),
                   Text(
-                    'مجموع الوجبات',
+                    'Total Meals',
                     textAlign: TextAlign.center,
                     style: textheme.headline2,
                   ),

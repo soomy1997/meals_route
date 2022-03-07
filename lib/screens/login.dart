@@ -1,16 +1,69 @@
 import 'package:flutter/material.dart';
+import 'package:meals_route/screens/delivery_times.dart';
 import 'package:meals_route/screens/home_page.dart';
 import 'package:meals_route/screens/sign_up.dart';
 import 'package:meals_route/utils/constants.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  // Initially password is obscure
+  bool _obscureText = true;
+  // Toggles the password show status
+  void _togglePasswordStatus() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    TextEditingController _emailController = TextEditingController();
-    TextEditingController _passController = TextEditingController();
-      final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final TextEditingController _emailController = TextEditingController();
+    final TextEditingController _passController = TextEditingController();
+
+    void _loginUser(String email, String password, BuildContext context) {
+      try {
+        if (_emailController.text.trim() == 'user@gmail.com' &&
+            _passController.text.trim() == '123456') {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            ),
+            (route) => false,
+          );
+        } else if (_emailController.text.trim() == 'delivery@gmail.com' &&
+            _passController.text.trim() == '123456') {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const DeliveryScreen(),
+            ),
+            (route) => false,
+          );
+        } else {
+          //_showToast();
+          Fluttertoast.showToast(
+            msg: "Icorrect email or Password",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0,
+          );
+        }
+      } catch (e) {
+        e.toString();
+      }
+    }
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -47,9 +100,10 @@ class LoginPage extends StatelessWidget {
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
-                        labelText: "Email ID",
-                        labelStyle:
-                            TextStyle(fontSize: 14, color: Colors.grey.shade400),
+                        labelText: "example@gmail.com",
+                        prefixIcon: const Icon(Icons.email),
+                        labelStyle: TextStyle(
+                            fontSize: 14, color: Colors.grey.shade400),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
@@ -57,10 +111,11 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: const BorderSide(
-                              color: Colors.red,
-                            )),
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(
+                            color: Colors.red,
+                          ),
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -68,15 +123,25 @@ class LoginPage extends StatelessWidget {
                     ),
                     TextField(
                       controller: _passController,
+                      obscureText: _obscureText,
                       decoration: InputDecoration(
-                        labelText: "Password",
-                        labelStyle:
-                            TextStyle(fontSize: 14, color: Colors.grey.shade400),
+                        labelText: 'enter Password',
+                        prefixIcon: const Icon(Icons.lock),
+                        labelStyle: TextStyle(
+                            fontSize: 14, color: Colors.grey.shade400),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
                             color: Colors.grey.shade300,
                           ),
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscureText
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                          ),
+                          onPressed: _togglePasswordStatus,
                         ),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -92,8 +157,8 @@ class LoginPage extends StatelessWidget {
                       alignment: Alignment.topRight,
                       child: Text(
                         "Forgot Password ?",
-                        style:
-                            TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w600),
                       ),
                     ),
                     const SizedBox(
@@ -104,12 +169,10 @@ class LoginPage extends StatelessWidget {
                       width: double.infinity,
                       child: MaterialButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: ((context) => const HomePage()),
-                            ),
-                          );
+                          if (_formKey.currentState!.validate()) {
+                            _loginUser(_emailController.text.trim(),
+                                _passController.text.trim(), context);
+                          }
                         },
                         padding: const EdgeInsets.all(0),
                         child: Ink(

@@ -187,7 +187,7 @@ class _Tab2State extends State<Tab2> {
 
 List<Campaign> campaign = <Campaign>[
   Campaign(
-    campaignName: 'حملة أ',
+    campaignName: 'Campaign A',
     mealType: 'الوجبات العادية',
     mealNumber: '٣٨',
     campaignPhoneNumber: '05xxxxxxx',
@@ -195,7 +195,7 @@ List<Campaign> campaign = <Campaign>[
     deliveryTime: '١٢ مايو ٢٠٢٢',
   ),
   Campaign(
-    campaignName: 'حملة ب',
+    campaignName: 'Campaign B',
     mealType: 'وجبات مرضى الكلى',
     mealNumber: '٣',
     campaignPhoneNumber: '05xxxxxxx',
@@ -203,7 +203,7 @@ List<Campaign> campaign = <Campaign>[
     deliveryTime: '١٢ مايو ٢٠٢٢',
   ),
   Campaign(
-    campaignName: 'حملة ث',
+    campaignName: 'Campaign C',
     mealType: 'وجبات خالية من الغلوتين',
     mealNumber: '٧',
     campaignPhoneNumber: '05xxxxxxx',
@@ -211,7 +211,7 @@ List<Campaign> campaign = <Campaign>[
     deliveryTime: '١٢ مايو ٢٠٢٢',
   ),
   Campaign(
-    campaignName: 'حملة ج',
+    campaignName: 'Campaign D',
     mealType: 'وجبات قليلة الصوديوم',
     mealNumber: '١٩',
     campaignPhoneNumber: '05xxxxxxx',
@@ -219,7 +219,7 @@ List<Campaign> campaign = <Campaign>[
     deliveryTime: '١٢ مايو ٢٠٢٢',
   ),
   Campaign(
-    campaignName: 'حملة ح',
+    campaignName: 'Campaign G',
     mealType: 'وجبات خالية من اللاكتوز',
     mealNumber: '٢٨',
     campaignPhoneNumber: '05xxxxxxx',

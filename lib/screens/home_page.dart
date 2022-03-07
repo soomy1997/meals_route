@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meals_route/models/campaign.dart';
 import 'package:meals_route/utils/drawer.dart';
-import 'package:meals_route/utils/provider.dart';
 import 'package:meals_route/utils/tab_1.dart';
 import 'package:meals_route/utils/tab_2.dart';
 import 'package:meals_route/utils/tab_3.dart';
-import 'package:provider/provider.dart';
 
 import '../utils/constants.dart';
 
@@ -23,12 +20,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     "lib/img/pic1.png",
     "lib/img/pic1.png",
     "lib/img/pic1.png",
-  ];
-  List<String> campaign = [
-    "Saleh Campaign",
-    "Khaled Campaign",
-    "Fhahad Campaign",
-    "SA’AD Campaign",
   ];
 
   @override
@@ -62,7 +53,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   height: 100,
                 ),
                 Text(
-                  ' المطعم المركزي ',
+                  'Central \n Kitchen',
                   textAlign: TextAlign.center,
                   style: textheme.headline1,
                 ),
@@ -73,9 +64,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 unselectedLabelColor: Colors.grey[500],
                 controller: _tabController,
                 tabs: const [
-                  Tab(text: 'إحصائيات الوجبات'),
-                  Tab(text: 'الحملات'),
-                  Tab(text: 'التوصيل'),
+                  Tab(text: 'All Meals'),
+                  Tab(text: 'Campaigns'),
+                  Tab(text: 'Delivery'),
                 ]),
             Expanded(
               child: TabBarView(controller: _tabController, children: const [

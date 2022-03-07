@@ -36,6 +36,7 @@ dependencies:
   flip_card: ^0.6.0
   settings_ui: ^2.0.2
   provider: ^6.0.0
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
