@@ -43,7 +43,7 @@ class _MealMenuScreenState extends State<MealMenuScreen> {
           );
         }),
       ),
-     drawer: const MainDrawer(),
+      drawer: const MainDrawer(),
       body: ListView.builder(
           shrinkWrap: true,
           itemCount: campaign.length,
@@ -59,7 +59,7 @@ class _MealMenuScreenState extends State<MealMenuScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 200,
+                  height: 340,
                   child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -90,7 +90,7 @@ class _MealMenuScreenState extends State<MealMenuScreen> {
           top: 10,
           bottom: 10,
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 100),
         decoration: BoxDecoration(
             color: white,
             borderRadius: BorderRadius.circular(25),
@@ -100,12 +100,12 @@ class _MealMenuScreenState extends State<MealMenuScreen> {
           children: [
             Image.asset(
               imagePath,
-              height: 70,
-              width: 70,
+              height: 140,
+              width: 140,
             ),
             Text(
               name,
-              style: textheme.subtitle2,
+              style: textheme.headline4,
             ),
             const RawMaterialButton(
               onPressed: null,
@@ -116,7 +116,7 @@ class _MealMenuScreenState extends State<MealMenuScreen> {
                   icon: Icon(
                     Icons.arrow_forward_ios_outlined,
                     color: white,
-                    size: 10,
+                    size: 20,
                   )),
             )
           ],
