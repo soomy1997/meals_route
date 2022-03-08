@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_route/screens/login.dart';
+import 'package:meals_route/screens/meals_menu.dart';
 import 'package:meals_route/screens/settings.dart';
 
 import 'constants.dart';
@@ -44,26 +45,26 @@ class _MainDrawerState extends State<MainDrawer> {
               );
             },
           ),
-          // ListTile(
-          //   leading: const Icon(
-          //     Icons.settings,
-          //   ),
-          //   title: const Text(
-          //     'expand demo',
-          //     style: TextStyle(
-          //       fontSize: 18,
-          //     ),
-          //   ),
-          //   onTap: () {
-          //     Navigator.pop(context);
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => const ExpansionPanelDemo(),
-          //       ),
-          //     );
-          //   },
-          // ),
+          ListTile(
+            leading: const Icon(
+              Icons.menu_book_rounded,
+            ),
+            title: const Text(
+              'Meal Menu ',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MealMenuScreen(),
+                ),
+              );
+            },
+          ),
           const Divider(
             thickness: 1,
           ),

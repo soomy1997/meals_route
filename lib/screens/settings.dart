@@ -35,12 +35,12 @@ class _SettingScreenState extends State<SettingScreen> {
         sections: [
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('عام'),
+            title: const Text('General'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.language),
-                title: const Text('اللغة'),
-                value: const Text('العربية'),
+                title: const Text('Language'),
+                value: const Text('English'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -52,7 +52,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.question_mark_rounded),
-                title: const Text('معلومات عنا'),
+                title: const Text('About Us'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -66,11 +66,11 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('الحساب'),
+            title: const Text('Account'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.account_box),
-                title: const Text('تعديل الملف الشخصي'),
+                title: const Text('Edit Profile'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -82,7 +82,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.lock),
-                title: const Text('تغيير كلمة السر'),
+                title: const Text('Change Password'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -96,11 +96,11 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           SettingsSection(
             margin: const EdgeInsetsDirectional.all(10),
-            title: const Text('الشروط والدعم'),
+            title: const Text('Terms and Support'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
                 leading: const Icon(Icons.assignment_sharp),
-                title: const Text('الأحكام والشروط'),
+                title: const Text('Terms and conditions'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,
@@ -112,7 +112,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               SettingsTile.navigation(
                 leading: const Icon(Icons.security),
-                title: const Text('الحماية و الخصوصية'),
+                title: const Text('Privacy & protection'),
                 onPressed: (BuildContext context) {
                   // Navigator.push(
                   //       context,

@@ -17,6 +17,7 @@ class _Tab2State extends State<Tab2> {
   @override
   Widget build(BuildContext context) {
     TextTheme textheme = Theme.of(context).textTheme;
+
     return Consumer<Demo>(
       builder: (context, value, child) {
         return Container(
@@ -44,10 +45,8 @@ class _Tab2State extends State<Tab2> {
                       return Container(
                         padding: const EdgeInsets.all(10),
                         child: Text(
-                          campaign[index].campaignName,
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          campaign[index].nationalityType,
+                          style: textheme.headline3,
                         ),
                       );
                     },
@@ -61,6 +60,21 @@ class _Tab2State extends State<Tab2> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
+                              Text(
+                                campaign[index].campaignName,
+                                style: textheme.subtitle1?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
                               RichText(
                                 text: TextSpan(
                                   children: [
@@ -72,7 +86,7 @@ class _Tab2State extends State<Tab2> {
                                     )),
                                     TextSpan(
                                       text: campaign[index].campaignPhoneNumber,
-                                      style: textheme.bodyLarge,
+                                      style: textheme.subtitle1,
                                     ),
                                   ],
                                 ),
@@ -91,7 +105,7 @@ class _Tab2State extends State<Tab2> {
                                     )),
                                     TextSpan(
                                       text: campaign[index].campaignLocation,
-                                      style: textheme.bodyLarge,
+                                      style: textheme.subtitle1,
                                     ),
                                   ],
                                 ),
@@ -107,8 +121,6 @@ class _Tab2State extends State<Tab2> {
                               itemBuilder: (context, index) {
                                 return Table(
                                   textDirection: TextDirection.rtl,
-                                  border: const TableBorder(
-                                      bottom: BorderSide(width: 1)),
                                   columnWidths: const {
                                     0: FractionColumnWidth(.1),
                                     1: FractionColumnWidth(.4),
@@ -119,13 +131,13 @@ class _Tab2State extends State<Tab2> {
                                     TableRow(
                                       children: [
                                         Text(
-                                          campaign[index].mealType,
-                                          style: textheme.bodyLarge,
+                                          campaign[index].mealNumber,
+                                          style: textheme.subtitle2
+                                              ?.copyWith(color: red),
                                         ),
                                         Text(
-                                          campaign[index].mealNumber,
-                                          style: textheme.bodyLarge
-                                              ?.copyWith(color: red),
+                                          campaign[index].mealType,
+                                          style: textheme.subtitle2,
                                         ),
                                       ],
                                     ),
@@ -143,24 +155,24 @@ class _Tab2State extends State<Tab2> {
                                 children: [
                                   TableRow(children: [
                                     Text(
-                                      '١٥٠ وجبة',
-                                      style: textheme.headline5
-                                          ?.copyWith(color: red),
+                                      'Total',
+                                      style: textheme.headline5,
                                     ),
                                     Text(
-                                      'المجموع',
-                                      style: textheme.headline5,
+                                      '150 Meals',
+                                      style: textheme.headline5
+                                          ?.copyWith(color: red),
                                     ),
                                   ]),
                                   TableRow(children: [
                                     Text(
+                                      'Delivery Time',
+                                      style: textheme.headline5,
+                                    ),
+                                    Text(
                                       campaign[index].deliveryTime,
                                       style: textheme.headline5
                                           ?.copyWith(color: red),
-                                    ),
-                                    Text(
-                                      'وقت التوصيل',
-                                      style: textheme.headline5,
                                     ),
                                   ]),
                                 ]),
@@ -182,5 +194,3 @@ class _Tab2State extends State<Tab2> {
     );
   }
 }
-
-
