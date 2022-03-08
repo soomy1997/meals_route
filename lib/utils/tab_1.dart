@@ -89,7 +89,7 @@ class Tab1 extends StatelessWidget {
                                 children: [
                                   Text(
                                     allMeals[index].mealType,
-                                    style: textheme.subtitle1,
+                                    style: textheme.subtitle2,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 17),

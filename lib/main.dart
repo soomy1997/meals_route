@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:meals_route/screens/home_page.dart';
 import 'package:meals_route/utils/constants.dart';
 import 'package:meals_route/models/provider.dart';
 import 'package:provider/provider.dart';
 
 main()  {
+ 
   runApp(const MyApp());
 }
 

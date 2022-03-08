@@ -3,7 +3,7 @@ import 'package:meals_route/delivery_screens/delivery_person_screen.dart';
 import 'package:meals_route/screens/home_page.dart';
 import 'package:meals_route/screens/sign_up.dart';
 import 'package:meals_route/utils/constants.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -50,15 +50,15 @@ class _LoginPageState extends State<LoginPage> {
           );
         } else {
           //_showToast();
-          Fluttertoast.showToast(
-            msg: "Icorrect email or Password",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0,
-          );
+          // Fluttertoast.showToast(
+          //   msg: "Icorrect email or Password",
+          //   toastLength: Toast.LENGTH_SHORT,
+          //   gravity: ToastGravity.BOTTOM,
+          //   timeInSecForIosWeb: 1,
+          //   backgroundColor: Colors.red,
+          //   textColor: Colors.white,
+          //   fontSize: 16.0,
+          // );
         }
       } catch (e) {
         e.toString();
