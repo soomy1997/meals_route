@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const white = Color(0xFFFFFFFF);
 const grey = Color(0xFF424242);
+const lightGrey = Color.fromARGB(255, 210, 206, 206);
 const red = Color(0xFFF44336);
 
 ThemeData theme() {

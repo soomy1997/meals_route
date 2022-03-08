@@ -13,14 +13,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  List<String> images = [
-    "lib/img/pic1.png",
-    "lib/img/pic1.png",
-    "lib/img/pic1.png",
-    "lib/img/pic1.png",
-    "lib/img/pic1.png",
-  ];
-
   @override
   Widget build(BuildContext context) {
     TabController? _tabController = TabController(length: 2, vsync: this);
@@ -29,15 +21,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white10,
-        leading: Builder(
-          builder: (context) => IconButton(
+        leading: Builder(builder: (context) {
+          return IconButton(
             icon: const Icon(
-              Icons.menu_rounded,
+              Icons.menu,
               color: Colors.grey,
             ),
             onPressed: () => Scaffold.of(context).openDrawer(),
-          ),
-        ),
+          );
+        }),
       ),
       drawer: const MainDrawer(),
       body: Center(

@@ -8,21 +8,8 @@ class Tab1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final db = FirebaseFirestore.instance.collection("Users").doc("").get();
-
-    List<AllMeals> allMeals = [
-      AllMeals("lib/img/normal-meal.png", 'مجموع الوجبات العادية', '٢١٠'),
-      AllMeals("lib/img/diabetes.jpg", 'مجموع وجبات مرضى السكر', '١٠٠'),
-      AllMeals("lib/img/renal.png", 'مجموع وجبات مرضى الكلى', '٩٠'),
-      AllMeals(
-          "lib/img/gluten-free.png", 'مجموع وجبات الخالية من الغلوتين', '١٠٠'),
-      AllMeals("lib/img/low-sodium.png", 'مجموع وجبات قليلة الصوديوم', '٧٠'),
-      AllMeals(
-          "lib/img/lactose-free.png", 'مجموع وجبات خالية من اللاكتوز', '١٢٠'),
-    ];
     TextTheme textheme = Theme.of(context).textTheme;
 
-    
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0, right: 20),
@@ -59,7 +46,6 @@ class Tab1 extends StatelessWidget {
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          //mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Column(
                               children: [
@@ -95,7 +81,7 @@ class Tab1 extends StatelessWidget {
                                     padding: const EdgeInsets.only(top: 17),
                                     child: Text(
                                       allMeals[index].mealNumber,
-                                      style: textheme.subtitle2
+                                      style: textheme.headline3
                                           ?.copyWith(color: red),
                                     ),
                                   )
@@ -118,12 +104,3 @@ class Tab1 extends StatelessWidget {
     );
   }
 }
-
-List<AllMeals> allMeals = [
-  AllMeals("lib/img/normal-meal.png", 'مجموع الوجبات العادية', '210'),
-  AllMeals("lib/img/diabetes.jpg", 'مجموع وجبات مرضى السكر', '100'),
-  AllMeals("lib/img/renal.png", 'مجموع وجبات مرضى الكلى', '90'),
-  AllMeals("lib/img/gluten-free.png", 'مجموع وجبات الخالية من الغلوتين', '100'),
-  AllMeals("lib/img/low-sodium.png", 'مجموع وجبات قليلة الصوديوم', '70'),
-  AllMeals("lib/img/lactose-free.png", 'مجموع وجبات خالية من اللاكتوز', '120'),
-];

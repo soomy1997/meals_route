@@ -68,11 +68,21 @@ flutter:
     - lib/img/gluten-free.png
     - lib/img/lactose-free.png
     - lib/img/low-sodium.png
-    - lib/img/normal-meal.png
+    - lib/img/normal-meal.jpg
+    - lib/img/breakfast.png
+    - lib/img/dinner.png
+    - lib/img/lunch.png
+    - lib/img/orange-juice.jpeg
+    - lib/img/fruit.png
+    - lib/img/egg.jpg
+    - lib/img/waffle.png
     - lib/img/moon.png
     - lib/img/day.png
     - lib/img/logo.png
-
+    - lib/img/WhatsApp Image 2022-03-08 at 11.50.40 AM.jpeg
+    - lib/img/WhatsApp Image 2022-03-08 at 11.52.37 AM.jpeg
+    - lib/img/WhatsApp Image 2022-03-08 at 11.58.35 AM.jpeg
+    - lib/img/WhatsApp Image 2022-03-08 at 12.01.23 PM.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

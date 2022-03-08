@@ -9,6 +9,7 @@ class Campaign extends ChangeNotifier {
   }
 
   final String campaignName;
+  final String nationalityType;
   final String mealType;
   final String mealNumber;
   final String campaignPhoneNumber;
@@ -18,6 +19,7 @@ class Campaign extends ChangeNotifier {
   Campaign({
     this.expanded = false,
     required this.campaignName,
+    required this.nationalityType,
     required this.mealType,
     required this.mealNumber,
     required this.campaignPhoneNumber,
@@ -26,49 +28,65 @@ class Campaign extends ChangeNotifier {
     required this.deliveryDate,
   });
 }
+
 List<Campaign> campaign = <Campaign>[
   Campaign(
-    campaignName: 'Campaign A',
-    mealType: 'الوجبات العادية',
+    campaignName: 'Campiagn A',
+    nationalityType: 'Indian',
+    mealType: 'Normal Meals',
     mealNumber: '38',
     campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
+    campaignLocation: 'Mecca, street 432 xx',
     deliveryDate: '22-May-22',
     deliveryTime: '07:45 PM',
   ),
   Campaign(
-    campaignName: 'Campaign B',
-    mealType: 'وجبات مرضى الكلى',
+    campaignName: 'Campiagn B',
+    nationalityType: 'Asian',
+    mealType: 'Diabetic Meals',
     mealNumber: '3',
     campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
+    campaignLocation: 'Mecca, street 432 xx',
     deliveryDate: '22-May-22',
     deliveryTime: '07:00 AM',
   ),
   Campaign(
-    campaignName: 'Campaign C',
-    mealType: 'وجبات خالية من الغلوتين',
+    campaignName: 'Campiagn C',
+    nationalityType: 'Turkish',
+    mealType: 'Gluten-Free Meals',
     mealNumber: '7',
     campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
+    campaignLocation: 'Mecca, street 432 xx',
     deliveryDate: '22-May-22',
     deliveryTime: '08:00 AM',
   ),
   Campaign(
-    campaignName: 'Campaign D',
-    mealType: 'وجبات قليلة الصوديوم',
+    campaignName: 'Campiagn D',
+    nationalityType: 'Kuwiti',
+    mealType: 'Low-Sodium Meals',
     mealNumber: '19',
     campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
+    campaignLocation: 'Mecca, street 432 xx',
     deliveryDate: '22-May-22',
     deliveryTime: '09:00 AM',
   ),
   Campaign(
-    campaignName: 'Campaign G',
-    mealType: 'وجبات خالية من اللاكتوز',
+    campaignName: 'Campiagn G',
+    nationalityType: 'Italian',
+    mealType: 'Lactose-Free meals',
     mealNumber: '28',
     campaignPhoneNumber: '05xxxxxxx',
-    campaignLocation: 'مكة، شارع ٢٣٤ ',
+    campaignLocation: 'Mecca, street 432 xx',
+    deliveryDate: '22-May-22',
+    deliveryTime: '07:00 AM',
+  ),
+  Campaign(
+    campaignName: 'Campiagn D',
+    nationalityType: 'Greek',
+    mealType: 'Renal meals',
+    mealNumber: '17',
+    campaignPhoneNumber: '05xxxxxxx',
+    campaignLocation: 'Mecca, street 432 xx',
     deliveryDate: '22-May-22',
     deliveryTime: '07:00 AM',
   ),

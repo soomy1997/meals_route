@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:meals_route/screens/Dashboard.dart';
 import 'package:meals_route/screens/login.dart';
+import 'package:meals_route/screens/meals_menu.dart';
 import 'package:meals_route/screens/settings.dart';
 
 import 'constants.dart';
@@ -24,6 +26,54 @@ class _MainDrawerState extends State<MainDrawer> {
               height: 150,
             ),
           ),
+         
+         ListTile(
+            leading: const Icon(
+              Icons.bar_chart_rounded,
+            ),
+            title: const Text(
+              'Dashboard',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DashbordPage(),
+                ),
+              );
+            },
+          ),
+          const Divider(
+            thickness: 1,
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.menu_book_rounded,
+            ),
+            title: const Text(
+              'Meal Menu ',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MealMenuScreen(),
+                ),
+              );
+            },
+          ),
+         
+          const Divider(
+            thickness: 1,
+          ),
           ListTile(
             leading: const Icon(
               Icons.settings,
@@ -44,26 +94,6 @@ class _MainDrawerState extends State<MainDrawer> {
               );
             },
           ),
-          // ListTile(
-          //   leading: const Icon(
-          //     Icons.settings,
-          //   ),
-          //   title: const Text(
-          //     'expand demo',
-          //     style: TextStyle(
-          //       fontSize: 18,
-          //     ),
-          //   ),
-          //   onTap: () {
-          //     Navigator.pop(context);
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => const ExpansionPanelDemo(),
-          //       ),
-          //     );
-          //   },
-          // ),
           const Divider(
             thickness: 1,
           ),
