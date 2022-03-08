@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_route/delivery_screens/delivery_status.dart';
 import 'package:meals_route/screens/login.dart';
 import 'package:meals_route/screens/meals_menu.dart';
 import 'package:meals_route/screens/settings.dart';
@@ -61,6 +62,26 @@ class _MainDrawerState extends State<MainDrawer> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const MealMenuScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.warning_amber_rounded,
+            ),
+            title: const Text(
+              'Delivery Status',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DeliveryStatus(),
                 ),
               );
             },

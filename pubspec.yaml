@@ -78,6 +78,9 @@ flutter:
     - lib/img/waffle.png
     - lib/img/moon.png
     - lib/img/day.png
+    - lib/img/x.png
+    - lib/img/done.png
+    - lib/img/question.png
     - lib/img/logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
