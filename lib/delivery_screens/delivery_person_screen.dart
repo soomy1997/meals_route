@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:meals_route/delivery_screens/qr_code.dart';
+import 'package:meals_route/utils/drawer.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import '../models/campaign.dart';
@@ -27,7 +28,27 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
           'Campaign Pickup Meal',
           style: textheme.headline3?.copyWith(color: white),
         ),
+        actions: [
+          Builder(
+            builder: (context) => IconButton(
+              icon: const Icon(
+                Icons.arrow_forward_ios_sharp,
+                color: Colors.white,
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ),
+        ],
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: const Icon(
+              Icons.menu,
+            ),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          );
+        }),
       ),
+      drawer: const MainDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(

@@ -18,8 +18,6 @@ class _Tab2State extends State<Tab2> {
   Widget build(BuildContext context) {
     TextTheme textheme = Theme.of(context).textTheme;
 
-    return Consumer<Demo>(
-      builder: (context, value, child) {
         return Container(
           padding: const EdgeInsets.all(10),
           child: ListView.separated(
@@ -33,7 +31,9 @@ class _Tab2State extends State<Tab2> {
                 dividerColor: Colors.green,
                 elevation: 2,
                 expansionCallback: (int item, bool status) {
-                  value.changeStatus(index);
+                   setState(() {
+                campaign[index].expanded = !campaign[index].expanded;
+              });
                   // d.changeStatus();
                   // print(d.expanded);
                   //  Consumer<Campaign>(campaign[index].expanded.changeStatus(true); )
@@ -191,8 +191,8 @@ class _Tab2State extends State<Tab2> {
               );
             },
           ),
-        );
-      },
+        
+      
       // child:
     );
   }

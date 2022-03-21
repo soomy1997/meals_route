@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:meals_route/screens/Dashboard.dart';
 import 'package:meals_route/screens/home_page.dart';
 import 'package:meals_route/screens/login.dart';
+import 'package:meals_route/screens/meals_menu.dart';
 import 'package:meals_route/screens/sign_up.dart';
 import 'package:meals_route/utils/constants.dart';
 import 'package:meals_route/models/provider.dart';
@@ -11,7 +12,7 @@ import 'package:provider/provider.dart';
 main()  {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp],
+    [DeviceOrientation.portraitDown],
   );
   runApp(const MyApp());
 }
@@ -24,8 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme(),
-      home: ChangeNotifierProvider<Demo>(
-          create: (context) => Demo(), child: const HomePage()),
+      home:  const HomePage(),
     );
   }
 }

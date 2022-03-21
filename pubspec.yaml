@@ -33,16 +33,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flip_card: ^0.6.0
   settings_ui: ^2.0.2
-  # firebase_database: ^9.0.8
-  # cloud_firestore: ^3.1.10
-  # firebase_core: ^1.13.1
-  # firebase_core_web: ^1.6.1
   provider: ^6.0.0
-  # fluttertoast: ^8.0.9
+  
   qr_flutter: ^4.0.0
   qr_code_scanner: ^0.7.0
+
 
 dev_dependencies:
   flutter_test:
@@ -78,11 +74,15 @@ flutter:
     - lib/img/waffle.png
     - lib/img/moon.png
     - lib/img/day.png
+    - lib/img/x.png
+    - lib/img/done.png
+    - lib/img/question.png
     - lib/img/logo.png
     - lib/img/WhatsApp Image 2022-03-08 at 11.50.40 AM.jpeg
     - lib/img/WhatsApp Image 2022-03-08 at 11.52.37 AM.jpeg
     - lib/img/WhatsApp Image 2022-03-08 at 11.58.35 AM.jpeg
     - lib/img/WhatsApp Image 2022-03-08 at 12.01.23 PM.jpeg
+    - lib/img/delivery.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

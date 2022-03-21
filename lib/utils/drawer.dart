@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_route/screens/Dashboard.dart';
+import 'package:meals_route/delivery_screens/delivery_status.dart';
 import 'package:meals_route/screens/login.dart';
 import 'package:meals_route/screens/meals_menu.dart';
 import 'package:meals_route/screens/settings.dart';
@@ -42,7 +42,7 @@ class _MainDrawerState extends State<MainDrawer> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DashbordPage(),
+                  builder: (context) => const MealMenuScreen(),
                 ),
               );
             },
@@ -70,7 +70,29 @@ class _MainDrawerState extends State<MainDrawer> {
               );
             },
           ),
-         
+          const Divider(
+            thickness: 1,
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.timelapse
+            ),
+            title: const Text(
+              'Delivery Status',
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DeliveryStatus(),
+                ),
+              );
+            },
+          ),
           const Divider(
             thickness: 1,
           ),
